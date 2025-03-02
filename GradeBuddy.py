@@ -53,4 +53,4 @@ if st.button("🧮 Calculate My Final Exam Score"):
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("📜 **Changelog**")
-st.sidebar.text("Version 1.2 - Streamlit version, improved UI, and humor!")
+st.sidebar.text("Version 1.2 - Welcome to GradeBuddy! 🎉")
