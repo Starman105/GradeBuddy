@@ -45,7 +45,7 @@ calc_choice = st.radio("Select an option", ["📊 Grade Effect Calculator", "�
 if calc_choice == "📊 Grade Effect Calculator":
     st.markdown("## 📊 Grade Effect Calculator")
     st.markdown("### Step 2: Enter Your Current Grade")
-    current_grade_effect = st.number_input("Your Current Grade (%)", min_value=0.0, max_value=100.0, step=0.1, key="effect_current", help="This is your current overall grade before the new test.")
+    current_grade_effect = st.number_input("Your Current Grade (%)", min_value=0.0, max_value=500.0, step=0.1, key="effect_current", help="This is your current overall grade before the new test.")
 
     total_points_based = st.radio("Is this test graded on total points?", ["Yes", "No"], index=1, help="Select 'Yes' if your test is scored based on total points instead of percentages.")
     
@@ -76,7 +76,7 @@ elif calc_choice == "🎓 Final Exam Calculator":
     exam_weight = st.slider("Final Exam Weight (%)", 5, 50, 20, help="Enter the percentage weight of your final exam in your overall grade.")
 
     st.markdown("### Step 4: Enter Your Current Grade")
-    current_grade = st.number_input("Your Current Grade (%)", min_value=0.0, max_value=100.0, step=0.1, help="Enter your current overall grade before the final exam.")
+    current_grade = st.number_input("Your Current Grade (%)", min_value=0.0, max_value=500.0, step=0.1, help="Enter your current overall grade before the final exam.")
 
     desired_grade_input = st.text_input("### Step 5: Enter Your Desired Grade (Letter or %)", help="Enter the letter grade or percentage you want as your final grade.")
 
@@ -104,4 +104,4 @@ elif calc_choice == "🎓 Final Exam Calculator":
 
 st.markdown("---")
 st.markdown("**📜 Changelog**")
-st.text("Version 1.5 - Grade Effect Calculator added! Now you can check how a test impacts your grade using either total points or percentage weight.")
+st.text("Version 1.6 - Stability and enhancement improvements! Improved calculations, UI adjustments, and increased grade input flexibility. Now supports grades over 100% and tests worth up to 100% of the final grade.")
