@@ -22,12 +22,16 @@ st.set_page_config(page_title="GradeBuddy 🎓", layout="centered")
 st.title("📚 GradeBuddy: Final Exam Calculator")
 st.markdown("Calculate what you need on your final to reach your dream grade! 💪")
 
-st.sidebar.header("Settings")
-scale = st.sidebar.radio("Grading Scale", [7, 10], format_func=lambda x: "7-Point Scale (93=A, 85=B, etc.)" if x == 7 else "10-Point Scale (90=A, 80=B, etc.)")
+st.markdown("### Step 1: Choose Your Grading Scale")
+scale = st.radio("Grading Scale", [7, 10], format_func=lambda x: "7-Point Scale (93=A, 85=B, etc.)" if x == 7 else "10-Point Scale (90=A, 80=B, etc.)")
 
+st.markdown("### Step 2: Enter Your Exam Details")
 exam_weight = st.slider("📊 Final Exam Weight (%)", 5, 50, 20)
+
+st.markdown("### Step 3: Enter Your Current Grade")
 current_grade = st.number_input("📈 Your Current Grade (%)", min_value=0.0, max_value=100.0, step=0.1)
-desired_grade_input = st.text_input("🏆 Desired Grade (Letter or %)")
+
+desired_grade_input = st.text_input("### Step 4: Enter Your Desired Grade (Letter or %)")
 
 if st.button("🧮 Calculate My Final Exam Score"):
     if desired_grade_input.isdigit():
@@ -51,6 +55,6 @@ if st.button("🧮 Calculate My Final Exam Score"):
         else:
             st.markdown("💀 **Well... miracles can happen, right?**")
 
-st.sidebar.markdown("---")
-st.sidebar.markdown("📜 **Changelog**")
-st.sidebar.text("Version 1.2 - Welcome to GradeBuddy! 🎉")
+st.markdown("---")
+st.markdown("📜 **Changelog**")
+st.text("Version 1.2 - Streamlit version, improved UI, and humor!")
