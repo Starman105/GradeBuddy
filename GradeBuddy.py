@@ -60,7 +60,7 @@ if calc_choice == "📊 Grade Effect Calculator":
     
     else:
         st.markdown("### Step 3: Enter Test Details")
-        test_weight = st.slider("Test/Quiz Weight (%)", 1, 50, 10, help="Enter the percentage weight of the test in your overall grade.")
+        test_weight = st.slider("Test/Quiz Weight (%)", 1, 100, 10, help="Enter the percentage weight of the test in your overall grade.")
         test_score = st.number_input("Test/Quiz Score (%)", min_value=0.0, max_value=100.0, step=0.1, help="Enter the percentage score you received on the test.")
         
         if st.button("📊 Calculate Grade Impact"):
